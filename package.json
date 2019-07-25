@@ -12,6 +12,10 @@
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sspringer82/techdivision"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
