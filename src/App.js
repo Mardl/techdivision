@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import List from './List';
 import BastiSeineComponent from './BastiSeineComponent';
+import Form from './Form';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <div>
         <List />
       </div>
+      <Form />
     </>
   );
 }
