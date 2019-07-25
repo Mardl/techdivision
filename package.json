@@ -1,6 +1,11 @@
 {
   "name": "techdivision",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "author": {
+    "name": "Basti",
+    "email": "sebastian.springer@maibornwolff.de",
+    "twitter": "@basti_springer"
+  },
   "private": true,
   "dependencies": {
     "react": "^16.8.6",
