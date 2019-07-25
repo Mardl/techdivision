@@ -1,5 +1,21 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
-export default function BastiSeineComponent({ name }) {
-  return <div>Hallo {name}</div>;
+function BastiSeineComponent({ history, match }) {
+  const name = match.params.name;
+  const age = match.params.age;
+  return (
+    <div>
+      Hallo {name} ({age})
+      <button
+        onClick={() => {
+          history.push('/list');
+        }}
+      >
+        geh zur liste
+      </button>
+    </div>
+  );
 }
+
+export default withRouter(BastiSeineComponent);
