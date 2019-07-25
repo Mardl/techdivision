@@ -15,22 +15,22 @@ function App() {
   return (
     <Provider store={store}>
       <ReduxList />
-      <BrowserRouter>
-        <ul>
-          <li>
-            <Link to="/list">Liste</Link>
-          </li>
-          <li>
-            <Link to="/form">Form</Link>
-          </li>
-        </ul>
-        <Switch>
-          <Route path="/" exact component={BastiSeineComponent} />
-          <Route path="/form" component={Form} />
-          <Route path="/list" component={List} />
-          <Route path="/:name/:age" exact component={BastiSeineComponent} />
-        </Switch>
-      </BrowserRouter>
+      {/*<BrowserRouter>*/}
+      {/*  <ul>*/}
+      {/*    <li>*/}
+      {/*      <Link to="/list">Liste</Link>*/}
+      {/*    </li>*/}
+      {/*    <li>*/}
+      {/*      <Link to="/form">Form</Link>*/}
+      {/*    </li>*/}
+      {/*  </ul>*/}
+      {/*  <Switch>*/}
+      {/*    <Route path="/" exact component={BastiSeineComponent} />*/}
+      {/*    <Route path="/form" component={Form} />*/}
+      {/*    <Route path="/list" component={List} />*/}
+      {/*    <Route path="/:name/:age" exact component={BastiSeineComponent} />*/}
+      {/*  </Switch>*/}
+      {/*</BrowserRouter>*/}
     </Provider>
   );
 }

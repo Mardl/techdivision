@@ -9,7 +9,6 @@ function BastiSeineComponent({ history, match }) {
       Hallo {name} ({age})
       <button
         onClick={() => {
-          debugger;
           history.push('/list');
         }}
       >
