@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-export default function Form() {
+export default function Form({ onSubmit }) {
   const [value, setValue] = useState('Basti');
 
   async function handleSubmit(event) {
     event.preventDefault();
-    const newValue = await axios.post('http://localhost:3001/todos', {
+    const { data } = await axios.post('http://localhost:3001/todos', {
       title: value,
     });
-    console.log(newValue);
+    onSubmit(data);
   }
   return (
     <form onSubmit={handleSubmit}>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ListItem from './ListItem';
 import axios from 'axios';
+import Form from './Form';
 
 export default function List() {
   const [todos, setTodos] = useState([]);
@@ -16,11 +17,20 @@ export default function List() {
     // };
   }, []);
 
+  function addTodo(newTodo) {
+    const clone = [...todos];
+    clone.push(newTodo);
+    setTodos(clone);
+  }
+
   return (
-    <ul>
-      {todos.map(todo => (
-        <ListItem key={todo.id} todo={todo} />
-      ))}
-    </ul>
+    <>
+      <ul>
+        {todos.map(todo => (
+          <ListItem key={todo.id} todo={todo} />
+        ))}
+      </ul>
+      <Form onSubmit={addTodo} />
+    </>
   );
 }
