@@ -13,7 +13,7 @@ export default function Form() {
   }
   return (
     <form onSubmit={handleSubmit}>
-      Wert:{' '}
+      Wert:
       <input
         type="text"
         name="name"

@@ -25,3 +25,5 @@ https://twitter.com/dan_abramov/status/981712092611989509/photo/1
 ` yarn backend
 
 ` npm run backend
+
+` yarn add axios
