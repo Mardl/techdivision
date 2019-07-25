@@ -1,5 +1,6 @@
 import React from 'react';
+import { Li } from './ListItem.styles';
 
 export default function ListItem({ todo }) {
-  return <li>{todo.title}</li>;
+  return <Li>{todo.title}</Li>;
 }

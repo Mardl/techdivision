@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import ListItem from './ListItem';
 import axios from 'axios';
-import Form from './Form';
+import Form from '../Form';
+import './List.scss';
 
 export default function List() {
   const [todos, setTodos] = useState([]);
@@ -24,13 +25,13 @@ export default function List() {
   }
 
   return (
-    <>
+    <div className="List">
       <ul>
         {todos.map(todo => (
           <ListItem key={todo.id} todo={todo} />
         ))}
       </ul>
       <Form onSubmit={addTodo} />
-    </>
+    </div>
   );
 }

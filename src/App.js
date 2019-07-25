@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import List from './List';
+import List from './List/List';
 import BastiSeineComponent from './BastiSeineComponent';
 
 function App() {
