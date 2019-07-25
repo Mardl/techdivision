@@ -1,14 +1,26 @@
 import React, { useState, useEffect } from 'react';
+import ListItem from './ListItem';
+import axios from 'axios';
 
 export default function List() {
-  const [state, setState] = useState('');
+  const [todos, setTodos] = useState([]);
 
   useEffect(() => {
-    setState('Klaus');
-    return () => {
-      console.log('componentWillUnmount');
-    };
+    (async () => {
+      const { data } = await axios.get('http://localhost:3001/todos');
+      setTodos(data);
+    })();
+
+    // return () => {
+    //   console.log('componentWillUnmount');
+    // };
   }, []);
 
-  return <div>{state}</div>;
+  return (
+    <ul>
+      {todos.map(todo => (
+        <ListItem key={todo.id} todo={todo} />
+      ))}
+    </ul>
+  );
 }

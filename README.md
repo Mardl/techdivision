@@ -17,3 +17,11 @@ Jest
 ### Lifecycle
 
 https://twitter.com/dan_abramov/status/981712092611989509/photo/1
+
+## Backend
+
+` yarn add json-server
+
+` yarn backend
+
+` npm run backend
