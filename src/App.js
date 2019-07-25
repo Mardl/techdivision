@@ -5,10 +5,16 @@ import BastiSeineComponent from './BastiSeineComponent';
 
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 import Form from './Form';
+import { Provider } from 'react-redux';
+import ReduxList from './ReduxList/List.containter';
 
+import configureStore from './configureStore';
+
+const store = configureStore();
 function App() {
   return (
-    <>
+    <Provider store={store}>
+      <ReduxList />
       <BrowserRouter>
         <ul>
           <li>
@@ -25,7 +31,7 @@ function App() {
           <Route path="/:name/:age" exact component={BastiSeineComponent} />
         </Switch>
       </BrowserRouter>
-    </>
+    </Provider>
   );
 }
 
